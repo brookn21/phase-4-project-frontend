@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Recommended from "./Recommended";
 
 function PeopleCard(props){
     const { randomPerson } = props
@@ -8,16 +9,10 @@ function PeopleCard(props){
         setClicked(!clicked)
     }
     return(
-        <div className="personCard">
-            {clicked 
-            ?
-            <div onClick={changeClick} className= "personCard">
-            <img src={randomPerson.img} alt="profile pic"
-            // height="440px"
-            width="300px"/>
-        </div>
-            :
-        <div onClick={changeClick} className="personBack">
+    <div className="personCard">
+        
+        <span className="personInfo">
+            
             <h2>{randomPerson.name}</h2>
             <h3>Height: {randomPerson.height}</h3>
             <h3>Hair Color: {randomPerson.hairColor}</h3>
@@ -26,11 +21,21 @@ function PeopleCard(props){
             <h3>Birth Year: {randomPerson.birthYear}</h3>
             <h3>Gender: {randomPerson.gender}</h3>
             <h3>Home World: {randomPerson.homeWorld}</h3>
+        </span>
+        
+        <span className= "personImage">
+        <div className="likebtn">
+        <img src="images/like.jpg" alt="like button"/>
         </div>
-}
-        <button>like</button>
-        <button>dislike</button>
+            <img src={randomPerson.img} alt="profile pic"
+            // height="440px"
+            width="300px"/>
+        <div className="likebtn">
+            <img src="images/dislike.jpg" alt="dislike button"/>
         </div>
+        </span>
+        < Recommended />
+    </div>
     )
 }
 

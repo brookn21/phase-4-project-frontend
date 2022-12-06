@@ -1,6 +1,7 @@
 import React from "react";
 import PeopleHolder from "./PeopleHolder";
 import PeopleCard from "./PeopleCard";
+import NavBar from "./NavBar";
 
 function HomePage(){
     const person1 = {
@@ -33,7 +34,8 @@ function HomePage(){
     const randomPerson = ppl[Math.floor(Math.random() * ppl.length)]
 
     return(
-        <div>
+        <div className="main-container">
+            < NavBar />
             {/* <PeopleHolder ppl = { ppl }/> */}
             < PeopleCard randomPerson = {randomPerson}/>
         </div>
