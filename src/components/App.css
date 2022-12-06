@@ -108,6 +108,9 @@ img {
 
 .recs {
   color: #ffffff;
+  float: left;
+  text-align: center;
+  margin: 0 0 0 50px;
 }
 
 .App {
